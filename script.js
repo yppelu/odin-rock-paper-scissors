@@ -28,6 +28,26 @@ function getComputerChoice() {
   }
 }
 
+// Returns a word with the first letter in upper and the rest in lower case
+function capitalize(word) {
+  return (word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase);
+}
+
+// Prompt a player to choose and checks if an input is valid
+function getPlayerChoice() {
+  let playerChoice = prompt('Your choice', '');
+  if (playerChoice === null) {
+    alert('Cancelled');
+    return (1);
+  }
+  playerChoice = capitalize(playerChoice);
+  if (choices[playerChoice] === undefined) {
+    alert('Wrong input, try again');
+    return (2);
+  }
+  return (playerChoice);
+}
+
 /*
 ** Compares player's and computer's choices
 ** and returns a string saying who won and how
