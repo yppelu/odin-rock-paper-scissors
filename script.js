@@ -10,9 +10,9 @@ const choices = {
 }
 // 2D array with Rock-Paper-Scissors order; player in rows, computer in columns
 const loserWinner = [
-  [0, 1, -1],
-  [-1, 0, 1],
-  [1, -1, 0]
+  [0, -1, 1],
+  [1, 0, -1],
+  [-1, 1, 0]
 ]
 
 // Returns a string with a random computer choice
@@ -57,11 +57,11 @@ function playOneRound(playerChoice, computerChoice) {
   let computerChoiceNum = choices[computerChoice];
   switch (loserWinner[playerChoiceNum][computerChoiceNum]) {
     case 1:
-      return (`You win! ${playerChoice} beats ${computerChoice}.`);
+      return (`You win! ${playerChoice} over ${computerChoice}.`);
     case 0:
       return (`It is a tie! ${playerChoice} and ${computerChoice}.`);
     case -1:
-      return (`You lose! ${computerChoice} beats ${playerChoice}.`);
+      return (`You lose! ${computerChoice} over ${playerChoice}.`);
   }
 }
 
