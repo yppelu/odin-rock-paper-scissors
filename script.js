@@ -30,7 +30,7 @@ function getComputerChoice() {
 
 // Returns a word with the first letter in upper and the rest in lower case
 function capitalize(word) {
-  return (word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase);
+  return (word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase());
 }
 
 // Prompt a player to choose and checks if an input is valid
