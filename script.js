@@ -64,3 +64,19 @@ function playOneRound(playerChoice, computerChoice) {
       return (`You lose! ${computerChoice} beats ${playerChoice}.`);
   }
 }
+
+// Plays five rounds
+function game() {
+  let playerChoice, computerChoice;
+  for (let i = 0; i < 5; i++) {
+    playerChoice = getPlayerChoice();
+    if (playerChoice === 1) {
+      return;
+    } else if (playerChoice === 2) {
+      i--;
+    } else {
+      computerChoice = getComputerChoice();
+      console.log(playOneRound(playerChoice, computerChoice));
+    }
+  }
+}
