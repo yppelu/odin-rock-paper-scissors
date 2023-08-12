@@ -1,3 +1,4 @@
+/* Reset CSS style */
 * {
   border: 0;
   box-sizing: border-box;
@@ -12,15 +13,19 @@ ul {
   list-style: none;
 }
 
+/* Main styling */
+
 .container {}
+
+.btn-start-game {}
+
+/* First open web page window styles */
 
 .first-open {}
 
+/* Game in progress window styles */
+
 .game-in-progress {}
-
-.game-finished {}
-
-.btn-start-game {}
 
 .choices {}
 
@@ -31,5 +36,9 @@ ul {
 .btn-scissors {}
 
 .round-result {}
+
+/* Game finished window styles */
+
+.game-finished {}
 
 .game-result {}
