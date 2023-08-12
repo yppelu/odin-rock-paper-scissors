@@ -81,15 +81,20 @@ function playOneRound(playerChoice, computerChoice) {
 }
 
 function finishGame(playerWins, computerWins) {
+  if (playerWins === 5 && computerWins === 5) {
+    gameInProgressWindow.style.display = 'none';
+    gameFinishedWindow.style.display = 'block';
+    gameResult.textContent = `It is a tie! ${playerWins}:${computerWins}! Unbelievable!`;
+  }
   if (playerWins === 5) {
     gameInProgressWindow.style.display = 'none';
     gameFinishedWindow.style.display = 'block';
-    gameResult.textContent = `It is a victory! ${playerWins}:${computerWins}! Congratulations!`;
+    gameResult.textContent = `Victory! ${playerWins}:${computerWins}! Congratulations!`;
   }
   if (computerWins === 5) {
     gameInProgressWindow.style.display = 'none';
     gameFinishedWindow.style.display = 'block';
-    gameResult.textContent = ` Defeat! ${playerWins}:${computerWins}! Such a pity!`;
+    gameResult.textContent = `Defeat! ${playerWins}:${computerWins}! Such a pity!`;
   }
 }
 
