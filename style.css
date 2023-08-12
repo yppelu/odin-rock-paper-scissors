@@ -1,0 +1,35 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.container {}
+
+.first-open {}
+
+.game-in-progress {}
+
+.game-finished {}
+
+.btn-start-game {}
+
+.choices {}
+
+.btn-rock {}
+
+.btn-paper {}
+
+.btn-scissors {}
+
+.round-result {}
+
+.game-result {}
