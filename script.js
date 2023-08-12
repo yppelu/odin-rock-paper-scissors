@@ -61,40 +61,32 @@ function playOneRound(playerChoice, computerChoice) {
     case 1:
       roundResult.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
       playerWins++;
-      scoreBlock.textContent = `Score: ${playerWins}:${computerWins}`;
-      finishGame(playerWins, computerWins);
       break;
     case 0:
       roundResult.textContent = `It is a tie! ${playerChoice} and ${computerChoice}.`;
       playerWins++;
       computerWins++;
-      scoreBlock.textContent = `Score: ${playerWins}:${computerWins}`;
-      finishGame(playerWins, computerWins);
       break;
     case -1:
       roundResult.textContent = `You lose! ${computerChoice} beats ${playerChoice}.`;
       computerWins++;
-      scoreBlock.textContent = `Score: ${playerWins}:${computerWins}`;
-      finishGame(playerWins, computerWins);
       break;
   }
+  scoreBlock.textContent = `Score: ${playerWins}:${computerWins}`;
+  finishGame(playerWins, computerWins);
 }
 
 function finishGame(playerWins, computerWins) {
-  if (playerWins === 5 && computerWins === 5) {
+  if (playerWins === 5 || computerWins === 5) {
     gameInProgressWindow.style.display = 'none';
     gameFinishedWindow.style.display = 'block';
-    gameResult.textContent = `It is a tie! ${playerWins}:${computerWins}! Unbelievable!`;
-  }
-  if (playerWins === 5) {
-    gameInProgressWindow.style.display = 'none';
-    gameFinishedWindow.style.display = 'block';
-    gameResult.textContent = `Victory! ${playerWins}:${computerWins}! Congratulations!`;
-  }
-  if (computerWins === 5) {
-    gameInProgressWindow.style.display = 'none';
-    gameFinishedWindow.style.display = 'block';
-    gameResult.textContent = `Defeat! ${playerWins}:${computerWins}! Such a pity!`;
+    if (playerWins === 5 && computerWins === 5) {
+      gameResult.textContent = `It is a tie! ${playerWins}:${computerWins}! Unbelievable!`;
+    } else if (playerWins === 5) {
+      gameResult.textContent = `Victory! ${playerWins}:${computerWins}! Congratulations!`;
+    } else if (computerWins === 5) {
+      gameResult.textContent = `Defeat! ${playerWins}:${computerWins}! Such a pity!`;
+    }
   }
 }
 
