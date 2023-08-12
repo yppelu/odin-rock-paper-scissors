@@ -20,6 +20,7 @@ const gameInProgressWindow = document.querySelector('.game-in-progress');
 const gameFinishedWindow = document.querySelector('.game-finished');
 
 const startGameButton = document.querySelectorAll('.btn-start-game');
+
 const playerRockOption = document.querySelector('.player .btn-rock');
 const playerPaperOption = document.querySelector('.player .btn-paper');
 const playerScissorsOption = document.querySelector('.player .btn-scissors');
@@ -32,8 +33,10 @@ const scoreBlock = document.querySelector('.scores');
 const roundResult = document.querySelector('.round-result');
 const gameResult = document.querySelector('.game-result');
 
-// Highlights the button which computer chose
-// And returns a string representing computer choice
+/*
+** Highlights the button which computer chose
+** And returns a string representing computer choice
+*/
 function getComputerChoice() {
   computerRockOption.classList.remove('chosen');
   computerPaperOption.classList.remove('chosen');
@@ -52,8 +55,10 @@ function getComputerChoice() {
   }
 }
 
-// Compares player's and computer's choices
-// and returns a string saying who won and how
+/*
+** Compares player's and computer's choices
+** and assign a string saying who won and how to the round result div
+*/
 function playOneRound(playerChoice, computerChoice) {
   let playerChoiceNum = choices[playerChoice];
   let computerChoiceNum = choices[computerChoice];
@@ -76,6 +81,10 @@ function playOneRound(playerChoice, computerChoice) {
   finishGame(playerWins, computerWins);
 }
 
+/*
+** Checks if player or a computer gained a score of 5
+** and if it is true finished the game
+*/
 function finishGame(playerWins, computerWins) {
   if (playerWins === 5 || computerWins === 5) {
     gameInProgressWindow.style.display = 'none';
@@ -93,6 +102,10 @@ function finishGame(playerWins, computerWins) {
 let computerWins;
 let playerWins;
 
+/*
+** When click startButton, wins counters and computer choices resets,
+** and the main game window opens
+*/
 startGameButton.forEach((startButton) => startButton.addEventListener('click', () => {
   computerWins = 0;
   playerWins = 0;
