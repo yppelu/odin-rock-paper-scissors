@@ -90,7 +90,6 @@ button:hover {
 
 .computer button {
   cursor: auto;
-  transition: 0s;
 }
 
 .computer button:hover {
@@ -99,7 +98,7 @@ button:hover {
 }
 
 .chosen {
-  box-shadow: 0 5px 5px #ffd900;
+  box-shadow: 0 5px 5px rgb(255, 217, 0, 1);
   background-color: rgba(57, 33, 41, 1);
 }
 

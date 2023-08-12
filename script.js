@@ -118,14 +118,23 @@ startGameButton.forEach((startButton) => startButton.addEventListener('click', (
 }));
 
 playerRockOption.addEventListener('click', () => {
+  playerPaperOption.classList.remove('chosen');
+  playerScissorsOption.classList.remove('chosen');
+  playerRockOption.classList.add('chosen');
   playOneRound('Rock', getComputerChoice());
   roundCount++;
 });
 playerPaperOption.addEventListener('click', () => {
+  playerRockOption.classList.remove('chosen');
+  playerScissorsOption.classList.remove('chosen');
+  playerPaperOption.classList.add('chosen');
   playOneRound('Paper', getComputerChoice());
   roundCount++;
 });
 playerScissorsOption.addEventListener('click', () => {
+  playerRockOption.classList.remove('chosen');
+  playerPaperOption.classList.remove('chosen');
+  playerScissorsOption.classList.add('chosen');
   playOneRound('Scissors', getComputerChoice());
   roundCount++;
 });
