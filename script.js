@@ -109,6 +109,9 @@ let playerWins;
 startGameButton.forEach((startButton) => startButton.addEventListener('click', () => {
   computerWins = 0;
   playerWins = 0;
+  playerRockOption.classList.remove('chosen');
+  playerPaperOption.classList.remove('chosen');
+  playerScissorsOption.classList.remove('chosen');
   computerRockOption.classList.remove('chosen');
   computerPaperOption.classList.remove('chosen');
   computerScissorsOption.classList.remove('chosen');
