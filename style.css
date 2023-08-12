@@ -90,6 +90,7 @@ button:hover {
 
 .computer button {
   cursor: auto;
+  transition: 0s;
 }
 
 .computer button:hover {
