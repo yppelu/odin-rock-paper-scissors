@@ -1,8 +1,3 @@
-/*
-** When a choice is made add this property to the choice button:
-**                                box-shadow: 0 5px 5px #ffd900;
-*/
-
 /* Reset CSS style */
 * {
   border: 0;
@@ -72,10 +67,11 @@ button:hover {
 
 .game-in-progress {
   text-align: center;
+  display: none;
 }
 
 .game-in-progress h2 {
-  font-size: 150%;
+  font-size: 125%;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -97,12 +93,33 @@ button:hover {
   margin-right: 20px;
 }
 
-.round-result {}
+.computer button {
+  cursor: auto;
+}
+
+.computer button:hover {
+  background-color: rgba(57, 33, 41, 0.75);
+  cursor: auto;
+}
+
+.chosen {
+  box-shadow: 0 5px 5px #ffd900;
+  background-color: rgba(57, 33, 41, 1);
+}
+
+.chosen:hover {
+  cursor: auto;
+}
+
+.computer .chosen:hover {
+  background-color: rgba(57, 33, 41, 1);
+}
 
 /* Game finished window styles */
 
 .game-finished {
   text-align: center;
+  display: none;
 }
 
 .game-result {
