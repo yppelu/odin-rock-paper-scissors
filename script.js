@@ -115,6 +115,8 @@ startGameButton.forEach((startButton) => startButton.addEventListener('click', (
   computerRockOption.classList.remove('chosen');
   computerPaperOption.classList.remove('chosen');
   computerScissorsOption.classList.remove('chosen');
+  scoreBlock.textContent = 'Score: 0:0';
+  roundResult.textContent = '';
   firstOpenWindow.style.display = 'none';
   gameFinishedWindow.style.display = 'none';
   gameInProgressWindow.style.display = 'block';
