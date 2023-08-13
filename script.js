@@ -99,6 +99,18 @@ function finishGame(playerWins, computerWins) {
   }
 }
 
+// Removes all highlights, score and round result
+function cleanRoundResults() {
+  playerRockOption.classList.remove('chosen');
+  playerPaperOption.classList.remove('chosen');
+  playerScissorsOption.classList.remove('chosen');
+  computerRockOption.classList.remove('chosen');
+  computerPaperOption.classList.remove('chosen');
+  computerScissorsOption.classList.remove('chosen');
+  scoreBlock.textContent = 'Score: 0:0';
+  roundResult.textContent = '';
+}
+
 let computerWins;
 let playerWins;
 
@@ -109,14 +121,7 @@ let playerWins;
 startGameButton.forEach((startButton) => startButton.addEventListener('click', () => {
   computerWins = 0;
   playerWins = 0;
-  playerRockOption.classList.remove('chosen');
-  playerPaperOption.classList.remove('chosen');
-  playerScissorsOption.classList.remove('chosen');
-  computerRockOption.classList.remove('chosen');
-  computerPaperOption.classList.remove('chosen');
-  computerScissorsOption.classList.remove('chosen');
-  scoreBlock.textContent = 'Score: 0:0';
-  roundResult.textContent = '';
+  cleanRoundResults();
   firstOpenWindow.style.display = 'none';
   gameFinishedWindow.style.display = 'none';
   gameInProgressWindow.style.display = 'block';
